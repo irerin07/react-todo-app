@@ -4,25 +4,9 @@ import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
 
 const App = () => {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      text: 'Basics of React',
-      checked: true,
-    },
-    {
-      id: 2,
-      text: 'Styling the Components',
-      checked: true,
-    },
-    {
-      id: 3,
-      text: 'Making Todo App',
-      checked: false,
-    },
-  ]);
+  const [todos, setTodos] = useState([]);
 
-  const nextId = useRef(4);
+  const nextId = useRef(1);
 
   const onInsert = useCallback(
     text => {
