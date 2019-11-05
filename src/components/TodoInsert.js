@@ -11,9 +11,15 @@ const TodoInsert = ({ onInsert }) => {
 
   const onSubmit = useCallback(
     e => {
-      onInsert(value);
-      setValue('');
-      e.preventDefault();
+      console.log(value);
+      if (value === '' || value === null || value.length <= 0) {
+        alert('no message inserted');
+        e.preventDefault();
+      } else {
+        onInsert(value);
+        setValue('');
+        e.preventDefault();
+      }
     },
     [onInsert, value],
   );
