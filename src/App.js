@@ -64,3 +64,13 @@ const App = () => {
 };
 
 export default App;
+
+// const nextComplextObject = {
+//   ...complexObject,
+//   objectIndise: {
+//     ...complexObject.objectIndise,
+//     enabled: false,
+//   },
+// };
+// console.log(complexObject === nextComplextObject); //false
+// console.log(complexObject.objectIndise === nextComplextObject.objectIndise); //true
